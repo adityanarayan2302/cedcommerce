@@ -5,42 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cedcommerce</title>
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
-      }
-      
-      @media only screen and (max-width: 560px) {
-        #desktop {
-          display: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div
-      id="desktop"
-      style="
-        background-color: rgb(248, 243, 211);
-        padding-top: 50px;
-        height: 400px;
-      "
-    >
-      <div style="width: 100%; margin-left: 50px">
+    <!-- This is top div wrapping top section of website build for width above 560px -->
+    <div id="desktop">
+      <div id="logo_div">
         <img src="ced-new-logo.png" alt="Cedcommerce logo" />
       </div>
-      <div
-        style="
-          float: left;
-          width: 25%;
-          padding-top: 50px;
-          margin: 50px;
-          text-align: center;
-        "
-      >
-        <h1 style="text-shadow: 1px 1px black">Welcome to Cedcommerce!</h1>
-        <h3 style="text-shadow: 1px 1px black">Sign in for unlimited access</h3>
+      <div id="text_div">
+        <h1 class="text_shadow">Welcome to Cedcommerce!</h1>
+        <h3 class="text_shadow">Sign in for unlimited access</h3>
       </div>
       <div style="float: right">
         <img
@@ -53,23 +28,22 @@
       </div>
     </div>
 
-    <div style="margin: 100px;">
-      <h4 style="margin: 20px">Login with Email</h4>
+    <div id="mobile_site">
+      <img id="logo" src="ced-logo-symbol.svg" alt="ced-logo-symbol" />
 
+      <h1 id="mLogIn">Log In</h1>
+    </div>
+
+    <!-- div element wrapping Login for -->
+    <div id="login_div">
       <form action="POST">
+        <h4 id="login_text">Login with Email</h4>
         <input
           type="email"
           name="email"
           id="email"
           placeholder="Email*"
           required
-          style="
-            margin: 5px;
-            padding: 20px;
-            background-color: lightgrey;
-            border: none;
-            border-radius: 10px;
-          "
         />
         <input
           type="password"
@@ -77,29 +51,13 @@
           id="password"
           placeholder="Password*"
           required
-          style="
-            margin: 5px;
-            padding: 20px;
-            background-color: lightgrey;
-            border: none;
-            border-radius: 10px;
-          "
         />
         <br />
-        <button
-          type="submit"
-          style="
-            padding: 20px;
-            margin: 5px;
-            background-color: #413bbc;
-            width: 220px;
-            border: none;
-            border-radius: 10px;">
-          Login
-        </button>
-        <a href="#" style="text-decoration: none; color: black;">Forgot password ?</a>
-        <br>
-        <a href="#" style="text-decoration: none; color: black;"> &larr; back</a>
+        <button type="submit" id="btn">Login</button>
+
+        <a href="#" id="forgot_link">Forgot password ?</a>
+        <br />
+        <a href="#" id="back_link"> <i class="arrow left"></i><i class="arrow left"></i> Back</a>
       </form>
     </div>
   </body>
